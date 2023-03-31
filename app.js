@@ -12,36 +12,38 @@ async function fetchData(inputName) {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+
   fetchData(
     `https://rickandmortyapi.com/api/character/?name=${event.target.character.value}`
   ).then((ele) => {
-    // console.log(ele);
-    // console.log(ele.results);
-    // console.log(ele.results[0].name);
-
-    let arr = ele.results;
-    nameArr(arr);
+    if (ele.hasOwnProperty("error") && ele.error === "There is nothing here") {
+      const pError = document.createElement("p");
+      pError.textContent = "Error -- There is nothing here";
+      const mainTag = document.querySelector("main");
+      mainTag.innerHTML = "";
+      mainTag.append(pError);
+    } else {
+      const mainTag = document.querySelector("main");
+      mainTag.innerHTML = "";
+      const ulTag = document.createElement("ul");
+      mainTag.append(ulTag);
+      nameArr(ele.results);
+    }
   });
 });
 
 function nameArr(array) {
   array.forEach((characterObj) => {
-    console.log(characterObj.name);
+    // console.log(characterObj.name);
     const charName = characterObj.name;
-    const mainTag = document.querySelector("main");
-    const divTag = document.createElement("div");
-    divTag.setAttribute("class", "character-name");
-    divTag.textContent = charName;
+    const newItem = document.createElement("li");
+    newItem.setAttribute("class", "character-name");
+    newItem.textContent = charName;
     const imgTag = document.createElement("img");
     imgTag.setAttribute("src", characterObj.image);
     imgTag.setAttribute("alt", `Picture of ${characterObj.name}`);
-    divTag.appendChild(imgTag);
-    mainTag.append(divTag);
-
-    // console.log(characterObj.name);
+    newItem.appendChild(imgTag);
+    const ulTag2 = document.querySelector("ul");
+    ulTag2.appendChild(newItem);
   });
 }
-
-// console.log(nameInfo);
-
-// function nameCard()

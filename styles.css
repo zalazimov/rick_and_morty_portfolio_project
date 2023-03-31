@@ -1,29 +1,15 @@
-/* html {
-  background: url("epic-rick-and-morty-gif.gif") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
 body {
   background-color: rgb(0, 213, 213);
 }
 
 .container {
-  /* width: 70%; */
-  /* background-image: url("epic-rick-and-morty-gif.gif"); */
   background-color: rgb(0, 213, 213);
   margin: 0 auto;
   display: grid;
-  /* grid-template-columns: repeat(auto, minmax(200px, 1fr)); */
   justify-content: center;
-  /* grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr); */
-  /* z-index: -1; */
 }
 
-img {
+img.banner {
   display: block;
   max-width: 100%;
 }
@@ -56,6 +42,29 @@ form {
 
 div.character-name {
   text-align: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.backhome:hover,
+.aboutme:hover {
+  background-color: lime;
+}
+
+li img {
+  border-radius: 15px;
+  /* padding: 10px;
+  border: 2px; */
+}
+
+div.aboutme {
+  display: inline;
 }
 
 @media screen and (max-width: 600px) {
