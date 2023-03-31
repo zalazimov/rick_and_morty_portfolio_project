@@ -1,5 +1,71 @@
+/* html {
+  background: url("epic-rick-and-morty-gif.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
 body {
-  width: 70%;
+  background-color: rgb(0, 213, 213);
+}
+
+.container {
+  /* width: 70%; */
+  /* background-image: url("epic-rick-and-morty-gif.gif"); */
   background-color: rgb(0, 213, 213);
   margin: 0 auto;
+  display: grid;
+  /* grid-template-columns: repeat(auto, minmax(200px, 1fr)); */
+  justify-content: center;
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
+  /* z-index: -1; */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+/* .banner {
+  grid-row: 2 / 2;
+  grid-column: 2 / 4;
+  justify-content: center;
+  text-align: center;
+} */
+/* :hover {
+  /* use this for something */
+/* } */
+
+/* .submitbox {
+  display: grid;
+  justify-content: center;
+} */
+
+/* .banner {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+  /* text-align: center; */
+h1,
+form {
+  text-align: center;
+}
+
+div.character-name {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .submitbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttonsearch {
+    width: 180px;
+  }
 }
