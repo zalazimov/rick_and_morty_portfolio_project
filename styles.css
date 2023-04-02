@@ -1,18 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&family=Righteous&display=swap");
+
 body {
   background-color: rgb(0, 213, 213);
 }
 
 .container {
+  font-family: "Noto Sans Lepcha", sans-serif;
+  font-family: "Righteous", cursive;
   background-color: rgb(0, 213, 213);
   margin: 0 auto;
   display: grid;
   justify-content: center;
 }
 
-img.banner {
+img.banner,
+img.banner2 {
   display: block;
   max-width: 100%;
 }
+
+img.portalImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container2 {
+  font-family: "Noto Sans Lepcha", sans-serif;
+  font-family: "Righteous", cursive;
+}
+
+div.aboutmeText,
+.description {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.description {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/* .description {
+  text-align: center;
+} */
 /* .banner {
   grid-row: 2 / 2;
   grid-column: 2 / 4;
@@ -45,8 +77,11 @@ div.character-name {
 }
 
 ul {
+  text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 5px;
+  row-gap: 20px;
   justify-content: center;
   list-style: none;
   padding: 0;
