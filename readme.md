@@ -12,7 +12,7 @@ Getting started with the Rick and Morty Character search is very easy. Just foll
 
 3. Access the index.html file: To launch the Rick and Morty Character search, open the index.html file in your web browser, which will open the Rick and Morty Character Search main page.
 
-4. Searching for a character: To search for a character, type in the character name into the input filed and hit the search button. This will display multiple versions of that character.
+4. Searching for a character: To search for a character, type in the character name into the input field and hit the search button. This will display the known versions of that character.
 
 # Technology used
 

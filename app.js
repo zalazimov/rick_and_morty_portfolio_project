@@ -38,11 +38,11 @@ function nameArr(array) {
     const charName = characterObj.name;
     const newItem = document.createElement("li");
     newItem.setAttribute("class", "character-name");
-    newItem.textContent = charName;
-    const imgTag = document.createElement("img");
-    imgTag.setAttribute("src", characterObj.image);
-    imgTag.setAttribute("alt", `Picture of ${characterObj.name}`);
-    newItem.appendChild(imgTag);
+    newItem.innerHTML = `<span class="spanText">${charName}</span><img src="${characterObj.image}" alt="${characterObj.name}"/>`;
+    // const imgTag = document.createElement("img");
+    // imgTag.setAttribute("src", characterObj.image);
+    // imgTag.setAttribute("alt", `Picture of ${characterObj.name}`);
+    // newItem.appendChild(imgTag);
     const ulTag2 = document.querySelector("ul");
     ulTag2.appendChild(newItem);
   });
